@@ -14,14 +14,18 @@ import profile_enrique from './profile_enrique.png'
 import profile_marco from './profile_marco.png'
 import profile_martin from './profile_martin.png'
 import avatar_icon from './avatar_icon.png'
+import arrow_icon from './arrow_icon.png'
+import help_icon from './help_icon.png'
 
 
 const assets = {
+        arrow_icon,
         bgimage,
         logo,
         menu_icon,
         search_icon,
-        avatar_icon
+        avatar_icon,
+        help_icon
 
 }
 
