@@ -23,7 +23,7 @@ const ChatContainer = ({selectedUser, setSelectedUser}) => {
             Martin Johnson
             <span className='w-2 h-2 rounded-full bg-green-500'></span>
           </p>
-          <img onClick={()=> setSelectedUser(null)} src={assets.arrow_icon} alt="" 
+          <img onClick={()=> setSelectedUser(null)} src={assets.arrow_icon} alt="close chat" 
           className='md:hidden max-w-7' />
           <img src={assets.help_icon} alt="test" className='max-md:hidden max-w-5' />
         </div>

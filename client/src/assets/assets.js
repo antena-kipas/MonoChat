@@ -48,7 +48,7 @@ export const userDummyData = [
         "email": "test2@greatstack.dev",
         "fullName": "Martin Johnson",
         "profilePic": profile_martin,
-        "bio": "Hi Everyone, I am Using QuickChat",
+        "bio": "Hi Everyone, I am Using MonoChat",
     },
     {
         "_id": "680f510af10f3cd28382ed01",
