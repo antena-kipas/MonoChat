@@ -17,7 +17,8 @@ import avatar_icon from './avatar_icon.png'
 import arrow_icon from './arrow_icon.png'
 import help_icon from './help_icon.png'
 import logo_icon from './logo_icon.svg'
-
+import gallery_icon from './galery_icon.svg'
+import send_button from './send_button.svg'
 
 const assets = {
         arrow_icon,
@@ -29,6 +30,8 @@ const assets = {
         help_icon,
         logo_icon,
         profile_martin,
+        gallery_icon,
+        send_button
 
 }
 
