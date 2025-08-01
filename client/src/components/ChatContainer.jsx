@@ -35,12 +35,10 @@ const ChatContainer = ({selectedUser, setSelectedUser}) => {
               !== '680f50e4f10f3cd28382ecf9' && 'flex-row-reverse'}`}>
                 {msg.image ? (
                   <img src={msg.image} alt="" className='max-w-[230px] border border-gray-700 
-                   rounded-lg overflow-hidden mb-8'/>
+                    overflow-hidden mb-8'/>
                 ):(
                   <p className={`p-2 max-w-[200px] md:text-sm font-light 
-                    rounded-lg mb-8 break-all bg-gray-500/30 text-white ${msg.
-                    senderId === '680f50e4f10f3cd28382ecf9' ? 'rounded-br-none' : 
-                    'rounded-bl-none'}`}>{msg.text}</p>
+                     mb-8 break-all bg-gray-500/30 text-white`}>{msg.text}</p>
                 )}
                 <div className="text-center text-xs ">
                   <img src={msg.senderId === '680f50e4f10f3cd28382ecf9' ? assets.avatar_icon 
