@@ -24,11 +24,16 @@ const  RightSidebar = ({selectedUser}) => {
           {imagesDummyData.map((url, index)=>(
             <div key={index} onClick={()=> window.open(url)}
             className='cursor-pinter rounded'>
-                <img src={url} alt="" className='h-full roundeded-md' />
+                <img src={url} alt="" className='h-full' />
             </div>
           ))}
         </div>
       </div>
+      <button className='absolute bottom-5 left-1/2 transform -translate-x-1/2
+      bg-gradient-to-r from-green-400 to-green-600 text-white border-none
+      text-sm font-light py-2 px-20 rounded-full cursor-pointer'>
+          Logout
+      </button>
     </div>
   )
 }
