@@ -1,4 +1,4 @@
-import assets from '../assets/assets'
+import assets, { imagesDummyData } from '../assets/assets'
 import React from 'react'
 
 const  RightSidebar = ({selectedUser}) => {
@@ -14,6 +14,20 @@ const  RightSidebar = ({selectedUser}) => {
           {selectedUser.fullName}
         </h1>
         <p className='px-10 mx-auto'>{selectedUser.bio}</p>
+      </div>
+      
+      <hr className='border-[#ffffff50] my-4'/>
+      <div className='px-5 text-xs'>
+        <p>Media</p>
+        <div className='mt-2 max-h-[200px] overflow-y-scroll grid grid-cols-2
+        gap-4 opacity-80'>
+          {imagesDummyData.map((url, index)=>(
+            <div key={index} onClick={()=> window.open(url)}
+            className='cursor-pinter rounded'>
+                <img src={url} alt="" className='h-full roundeded-md' />
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   )
