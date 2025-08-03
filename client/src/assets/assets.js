@@ -33,7 +33,7 @@ const assets = {
         profile_martin,
         gallery_icon,
         send_button,
-        logo_big
+        logo_big  
 
 }
 
