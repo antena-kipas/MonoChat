@@ -10,7 +10,7 @@ export const signup = async (req, res)=> {
         if(!fullname || !email || !password || !bio){
             return res.json({success: false, message: "Missing Dteails"})
         }
-        const user = await User.indOne({email});
+        const user = await User.findOne({email});
         
         if(user){
             return res.json({success: false, message: "Account already exist"})
@@ -30,7 +30,29 @@ export const signup = async (req, res)=> {
         });
     } catch (error) {
         console.log(error.message);
-        
         res.json({success: false, message: error.message});
     }
 }
+
+
+//controller login
+export const login = async (req, res) => {
+    try {
+        const {email, password} = req.body;
+        const userData = await User.findOne({email});
+
+        const isPasswordCorrect = await bcrypt.compare(password, userData.password);
+        if (!isPasswordCorrect){
+            return res.json({success: false, message: "Invalid credentials"});
+        }
+        
+        const token = generateToken(userData._id);
+        
+        res.json({success: true, userData, token, message: "Login Succesfull "});
+
+    } catch (error) {
+        console.log(error.message);
+        res.json({success: false, message: error.message});
+    }
+}
+
