@@ -5,11 +5,11 @@ import cloudinary from "../lib/cloudinary.js";
 
 // sign up 
 export const signup = async (req, res)=> {
-    const {fullname, email, password, bio} = req.body;
+    const {fullName, email, password, bio} = req.body;
 
     try {
-        if(!fullname || !email || !password || !bio){
-            return res.json({success: false, message: "Missing Dteails"})
+        if(!fullName || !email || !password || !bio){
+            return res.json({success: false, message: "Missing Details"})
         }
         const user = await User.findOne({email});
         
@@ -21,7 +21,7 @@ export const signup = async (req, res)=> {
         const hashedPassword = await bcrypt.hash(password, salt);
         
         const newUser = await User.create({
-            fullname, email, password: hashedPassword, bio
+            fullName, email, password: hashedPassword, bio
         });
 
         const token = generateToken(newUser._id);
@@ -58,7 +58,7 @@ export const login = async (req, res) => {
 }
 
 //Authentification COntroller 
-export const checkAuth = ()=> {
+export const checkAuth = (req, res)=> {
     res.json({success: true, user: req.user});
 }
 
