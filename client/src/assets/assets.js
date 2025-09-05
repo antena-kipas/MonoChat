@@ -1,4 +1,4 @@
-import bgimage from './bgimage.svg'
+
 import menu_icon from './menu_icon.png'
 import search_icon from './search_icon.png'
 import logo from './logo.png'
@@ -23,7 +23,7 @@ import logo_big from './logo_big.svg'
 
 const assets = {
         arrow_icon,
-        bgimage,
+    
         logo,
         menu_icon,
         search_icon,
